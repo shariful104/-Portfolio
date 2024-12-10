@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Shariful</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
 </head>
@@ -20,6 +20,7 @@
             background-color: rgb(24, 23, 22);
             color: white;
         }
+
         .thembg3 {
             background-color: rgb(33, 30, 28);
             color: white;
@@ -28,79 +29,85 @@
 
 
 
+    <!-- navbar start  -->
+    <nav class="fixed lg:top-10 left-0 w-full z-50 ">
+        <div class="container w-full max-w-3xl mx-auto">
+            <div
+                class="flex justify-between items-center border border-gray-500 text-white rounded-lg bg-white/10 backdrop-blur-md p-1">
+                <!-- Logo -->
+                <div class="p-2">
+                    <a href="#" class="text-2xl font-bold">SHARIFUL</a>
+                </div>
 
-<nav class="fixed lg:top-10 left-0 w-full z-50 ">
-    <div class="container w-full max-w-3xl mx-auto">
-        <div class="flex justify-between items-center border border-gray-500 text-white rounded-lg bg-white/10 backdrop-blur-md p-1">
-            <!-- Logo -->
-            <div class="p-2">
-                <a href="#" class="text-2xl font-bold">SHARIFUL</a>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-white hover:text-gray-300 focus:outline-none p-4 ">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Menu Links -->
+                <div id="menu" class="hidden md:flex md:space-x-4 text-lg">
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-500 hover:text-white rounded-lg">Home</a>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-500 hover:text-white rounded-lg">About</a>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-500 hover:text-white rounded-lg">Portfolio</a>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-500 hover:text-white rounded-lg">Services</a>
+                    <a href="#"
+                        class="block px-4 py-2 hover:bg-gray-500 bg-gray-500 hover:text-white rounded-lg mr-2">LET's
+                        TALK</a>
+                </div>
             </div>
 
-            <!-- Mobile Menu Button -->
-            <div class="md:hidden">
-                <button id="menu-toggle" class="text-white hover:text-gray-300 focus:outline-none p-4 ">
-                    <svg class="h-6 w-6" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7"></path>
-                    </svg>
-                </button>
+            <!-- Mobile Dropdown -->
+            <div id="dropdown-menu"
+                class="hidden absolute right-0 w-40 rounded-lg bg-white/10 backdrop-blur-md text-white shadow-lg mt-2 md:hidden">
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100 hover:text-black">Home</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100 hover:text-black">About</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100 hover:text-black">Portfolio</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100 hover:text-black">Services</a>
+
             </div>
 
-            <!-- Menu Links -->
-            <div id="menu" class="hidden md:flex md:space-x-4 text-lg">
-                <a href="#" class="block px-4 py-2 hover:bg-gray-500 hover:text-white rounded-lg">Home</a>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-500 hover:text-white rounded-lg">About</a>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-500 hover:text-white rounded-lg">Portfolio</a>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-500 hover:text-white rounded-lg">Services</a>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-500 bg-gray-500 hover:text-white rounded-lg mr-2">LET's TALK</a>
-            </div>
         </div>
+    </nav>
+    <script>
+        // JavaScript to handle menu toggling on mobile
+        const menuToggle = document.getElementById('menu-toggle');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+        const menu = document.getElementById('menu');
 
-        <!-- Mobile Dropdown -->
-        <div id="dropdown-menu" class="hidden absolute right-0 w-40 rounded-lg bg-white/10 backdrop-blur-md text-white shadow-lg mt-2 md:hidden">
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 hover:text-black">Home</a>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 hover:text-black">About</a>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 hover:text-black">Portfolio</a>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 hover:text-black">Services</a>
-            
-        </div>
-        
-    </div>
-</nav>
+        menuToggle.addEventListener('click', function () {
+            dropdownMenu.classList.toggle('hidden');
+        });
 
-<script>
-    // JavaScript to handle menu toggling on mobile
-    const menuToggle = document.getElementById('menu-toggle');
-    const dropdownMenu = document.getElementById('dropdown-menu');
-    const menu = document.getElementById('menu');
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function (event) {
+            if (!menuToggle.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                dropdownMenu.classList.add('hidden');
+            }
+        });
+    </script>
+    <!-- navbar end  -->
 
-    menuToggle.addEventListener('click', function () {
-        dropdownMenu.classList.toggle('hidden');
-    });
-
-    // Close dropdown when clicking outside
-    document.addEventListener('click', function (event) {
-        if (!menuToggle.contains(event.target) && !dropdownMenu.contains(event.target)) {
-            dropdownMenu.classList.add('hidden');
-        }
-    });
-</script>
-
-
-
-
+    <!-- top section start -->
     <section>
         <div class="container max-w-7xl mx-auto">
-            <div class="thembg1 container max-w-5xl mx-auto">
-                <div class="thembg1 flex border border-black justify-center items-center relative">
-                    <img src="assest/image/A_minimalist-removebg.png" alt="" class="relative lg:h-screen ">
+            <div class="thembg1">
+                <div class="thembg1 flex justify-center items-center relative">
+                    <img src="assest/image/A_minimalist-removebg.png" alt="" class="relative lg:h-full ">
                     <div
                         class="text-white text-center justify-items-center absolute bottom-20 flex flex-col justify-center">
                         <span class="lg:text-6xl text-2xl font-semibold font-courier" style="font-style: italic;">Web
                             Designer</span>
-                        <span class="lg:text-6xl text-2xl font-semibold font-courier" style="font-style: italic;">and</span>
-                        <span class="lg:text-6xl text-2xl font-semibold font-courier" style="font-style: italic;">Developer</span>
-                        <span class="lg:text-xl  text-2xlfont-courier pt-4" style="font-style: italic;">Primium web design,
+                        <span class="lg:text-6xl text-2xl font-semibold font-courier"
+                            style="font-style: italic;">and</span>
+                        <span class="lg:text-6xl text-2xl font-semibold font-courier"
+                            style="font-style: italic;">Developer</span>
+                        <span class="lg:text-xl  text-2xlfont-courier pt-4" style="font-style: italic;">Primium web
+                            design,
                             development and SEO</span>
                         <span class="text-xl font-courier" style="font-style: italic;"> services to help your business
                             stand out.</span>
@@ -126,24 +133,30 @@
                         <i class="fa-solid fa-compass-drafting"></i>
                     </div>
                 </div>
-                <div class="grid lg:grid-cols-3 grid-cols-1 gap-4 mx-4">
+                <div class="grid lg:grid-cols-3 grid-cols-1 gap-4 mx-4 ">
                     <div class="card px-4 py-3 text-start thembg3">
                         <p class="">
                             WEB DESIGN
                         </p>
-                        <span class="">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis tempora consequuntur eius voluptatibus officiis mollitia facilis, ipsam odio vel aliquid?</span>
+                        <span class="">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis tempora
+                            consequuntur eius voluptatibus officiis mollitia facilis, ipsam odio vel aliquid?</span>
                         <div class="">
-                            <i class="fa-solid fa-angle-up thembg1 px-5 py-3 m-2 rounded-full"></i>
-                            <span>ABOUT WEBDESIGN</span>
+                            <a href="#" class="">
+                                <i
+                                    class="fa-solid fa-angle-up thembg1 px-4 py-4 m-2 rounded-full origin-center hover:rotate-90 transition-transform duration-300"></i>
+                                <span>ABOUT WEBDESIGN</span>
+                            </a>
                         </div>
                     </div>
                     <div class="card px-4 py-3 text-start thembg3">
                         <p class="">
                             DEVELOPMENT
                         </p>
-                        <span class="">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis tempora consequuntur eius voluptatibus officiis mollitia facilis, ipsam odio vel aliquid?</span>
+                        <span class="">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis tempora
+                            consequuntur eius voluptatibus officiis mollitia facilis, ipsam odio vel aliquid?</span>
                         <div class="">
-                            <i class="fa-solid fa-angle-up thembg1 px-5 py-3 m-2 rounded-full"></i>
+                            <i
+                                class="fa-solid fa-angle-up thembg1 px-4 py-4 m-2 rounded-full origin-center hover:rotate-90 transition-transform duration-300"></i>
                             <span>ABOUT DEVELOPMENT</span>
                         </div>
                     </div>
@@ -151,23 +164,116 @@
                         <p class="">
                             SEO SERVICE
                         </p>
-                        <span class="">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis tempora consequuntur eius voluptatibus officiis mollitia facilis, ipsam odio vel aliquid?</span>
+                        <span class="">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis tempora
+                            consequuntur eius voluptatibus officiis mollitia facilis, ipsam odio vel aliquid?</span>
                         <div class="">
-                            <i class="fa-solid fa-angle-up thembg1 px-5 py-3 m-2 rounded-full"></i>
+                            <i
+                                class="fa-solid fa-angle-up thembg1 px-4 py-4 m-2 rounded-full origin-center hover:rotate-90 transition-transform duration-300"></i>
                             <span>ABOUT SEO</span>
                         </div>
-                    </div>                   
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+    <!-- top section start -->
+
+    <!-- work section start -->
+    <section>
+        <div class="container max-w-7xl mx-auto">
+            <div class="flex justify-between items-center">
+                <p class="text-white p-6 lg:text-4xl text-2xl">Selected Work</p>
+                <a href="" class="text-white">
+                    <i
+                        class="fa-solid fa-angle-up thembg1 lg:px-4 px-3 lg:py-4 py-3 m-2 rounded-full origin-center hover:rotate-90 transition-transform duration-300"></i>
+                    <span>SEE ALL</span>
+                </a>
+            </div>
+            <div class="grid lg:grid-cols-2 grid-cols-1 gap-4">
+                <div class="relative group">
+                    <!-- Image -->
+                    <img src="assest/image/a.jpg" alt="" class="aspect-video">
+                    <!-- Icon -->
+                    <i
+                        class="fa-solid fa-angle-up w-12 h-12 thembg1 m-2 rounded-full origin-center hover:rotate-45 transition-transform duration-300 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center opacity-0 group-hover:opacity-100"></i>
+                    <!-- Text Div -->
+                    <div
+                        class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex justify-between items-center border border-gray-500 text-white rounded-lg bg-white/10 backdrop-blur-lg w-10/12">
+                        <p class="m-2 text-2xl">Sonic</p>
+                        <p class="m-2 text-lg">Web Design</p>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <img src="assest/image/b.jpg" alt="" class="aspect-video">
+                    <i
+                        class="fa-solid fa-angle-up w-12 h-12 thembg1 m-2 rounded-full origin-center hover:rotate-45 transition-transform duration-300 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center opacity-0 group-hover:opacity-100"></i>
+                    <div
+                        class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex justify-between items-center border border-gray-500 text-white rounded-lg bg-white/10 backdrop-blur-lg w-10/12">
+                        <p class="m-2 text-2xl">Sonic</p>
+                        <p class="m-2 text-lg">Web Design</p>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <!-- Image -->
+                    <img src="assest/image/a.jpg" alt="" class="aspect-video">
+                    <!-- Icon -->
+                    <i
+                        class="fa-solid fa-angle-up w-12 h-12 thembg1 m-2 rounded-full origin-center hover:rotate-45 transition-transform duration-300 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center opacity-0 group-hover:opacity-100"></i>
+                    <!-- Text Div -->
+                    <div
+                        class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex justify-between items-center border border-gray-500 text-white rounded-lg bg-white/10 backdrop-blur-lg w-10/12">
+                        <p class="m-2 text-2xl">Sonic</p>
+                        <p class="m-2 text-lg">Web Design</p>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <img src="assest/image/b.jpg" alt="" class="aspect-video">
+                    <i
+                        class="fa-solid fa-angle-up w-12 h-12 thembg1 m-2 rounded-full origin-center hover:rotate-45 transition-transform duration-300 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center opacity-0 group-hover:opacity-100"></i>
+                    <div
+                        class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex justify-between items-center border border-gray-500 text-white rounded-lg bg-white/10 backdrop-blur-lg w-10/12">
+                        <p class="m-2 text-2xl">Sonic</p>
+                        <p class="m-2 text-lg">Web Design</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- work section end -->
+
+
+    <!-- the process start -->
+     <section>
+        <div class="container max-w-7xl mx-auto mt-20">
+            <div class="flex flex-col justify-items-center text-white text-center">
+                <span class="text-lg ">THE PROCESS</span>
+                <span class="text-4xl mb-4">Your Website in 5 steps</span>
+                <span class="text-xl ">Our process ensures that we create a website</span>
+                <span class="text-xl ">tailored to your business needs.</span>
+            </div>
+        </div>
+     </section>
+    <!-- the process end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
     <footer style="background-color: #f8f9fa; padding: 10px; text-align: center; border-top: 1px solid #dee2e6;">
         <p>&copy; 2024 Shariful islam. All rights reserved.</p>
     </footer>
-    
+
 </body>
 
 </html>
