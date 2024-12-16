@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shariful</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <script src="index.js"></script>
+</head>
+
+<body class="bg-black text-white">
+    <style>
+        .thembg1 {
+            background-color: rgb(14, 14, 14);
+            color: white;
+        }
+
+        .bgb {
+            background-color: rgb(237, 214, 182);
+            /* bg-white/10 */
+            color: black;
+            backdrop-filter: blur(10px);
+            /* backdrop-blur-md */
+        }
+
+
+        .thembg3 {
+            background-color: rgb(33, 30, 28);
+            color: white;
+        }
+    </style>
+    <!-- navbar start  -->
+    <nav class="fixed lg:top-10 left-0 w-full z-50 ">
+        <div class="container w-1/2 mx-auto">
+            <div
+                class="flex justify-between items-center border border-gray-500 text-white rounded-lg bg-white/10 backdrop-blur-md p-1">
+                <!-- Logo -->
+                <div class="p-2">
+                    <a href="index.html" class="text-2xl font-light font-mono">SHARIFUL.</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-white hover:text-gray-300 focus:outline-none p-4 ">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Menu Links -->
+                <div id="menu" class="hidden md:flex md:space-x-4 text-lg">
+                    <a href="service.html" class="block px-4 py-1.5  hover:text-white  hover:border-b-2 rounded-sm">
+                        Services</a>
+                    <a href="#" class="block px-4 py-1.5  hover:text-white  hover:border-b-2 rounded-sm">Work</a>
+                    <a href="about.html"
+                        class="block px-4 py-1.5  hover:text-white  hover:border-b-2 rounded-sm">About</a>
+                    <a href="#" class="block px-4 py-1.5  hover:text-white  hover:border-b-2 rounded-sm">Blog</a>
+                    <a href="#" class="block px-4 py-2 bgb hover:text-white rounded-lg mr-2">LET'S
+                        TALK</a>
+                </div>
+            </div>
+
+            <!-- Mobile Dropdown -->
+            <div id="dropdown-menu"
+                class="hidden absolute right-0 w-40 rounded-lg bg-white/10 backdrop-blur-md text-white shadow-lg mt-2 md:hidden">
+                <a href="service.html" class="block px-4 py-2 hover:text-black hover:border-b">Services</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100 hover:text-black">Work</a>
+                <a href="about.html" class="block px-4 py-2 hover:bg-gray-100 hover:text-black">About</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100 hover:text-black">Blog</a>
+
+            </div>
+
+        </div>
+    </nav>
+    <script>
+        // JavaScript to handle menu toggling on mobile
+        const menuToggle = document.getElementById('menu-toggle');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+        const menu = document.getElementById('menu');
+
+        menuToggle.addEventListener('click', function () {
+            dropdownMenu.classList.toggle('hidden');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function (event) {
+            if (!menuToggle.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                dropdownMenu.classList.add('hidden');
+            }
+        });
+    </script>
+    <!-- navbar end  -->
+
+    <!-- about section start -->
+    <section>
+        <div class="container max-w-7xl mx-auto">
+            <div class="flex mt-24">
+                <!-- left side start -->
+                <div class="w-2/5">
+                    <img src="assest/image/A minimalist.png" alt="">
+                </div>
+                <!-- left side end -->
+                <!-- right side start -->
+                <div class="w-3/5 overflow-y-auto ">
+                    <div class="flex flex-col  justify-center font-light p-8"
+                        style="font-family: 'Courier New', Courier, monospace;">
+                        <span class="text-8xl">Shariful</span>
+                        <span class="text-8xl">Islam</span>
+                        <span class="text-xl">Delivering Premium Web Design and Development </span>
+                        <span class="text-xl">Services to Boost Your Online Presence.</span>
+                        <button id="scrollDownButton" class="flex items-center group">
+                            <i class="fa-solid fa-arrow-down py-2.5 px-3 rounded-full border "></i>
+                            <span class="p-2 text-lg group-hover:underline">About Me</span>
+                        </button>
+                    </div>
+                    <!-- about my content -->
+                    <div class="border border-[rgb(33,32,29)] p-8 space-y-4 mt-40">
+                        <p class="text-lg">SHARIFUL</p>
+                        <p class="text-4xl font-light">Your Partner in Bringing Your Web Design Vision to Life.</p>
+                        <p class="text-sm font-light">As a freelance web designer and developer, I bring a unique combination of creativity and technical expertise to every project. With a keen eye for design and a passion for delivering user-friendly web experiences, I work closely with clients to understand their needs and bring their vision to life.</p>
+                        <p class="text-sm font-light">My approach is rooted in collaboration and communication, and I take pride in my ability to explain technical concepts in simple terms. Whether I'm developing a new website from scratch or optimizing an existing site for search engines, I always strive for excellence in both form and function. With a dedication to quality and a commitment to staying on top of the latest trends and technologies, I am confident in my ability to deliver exceptional results that exceed my clients' expectations.</p>
+                        <img src="assest/image/A minimalist-1.png" alt="">
+                    </div>
+                    <!-- my social link -->
+                     <div class="grid grid-cols-3 gap-4 mt-4">
+                        <div class="text-2xl bg-[rgb(33,32,29)] p-2">
+                         <a href="#"><i class="fab fa-facebook p-2"></i>Facebook</a>
+                        </div>
+                        <div class="text-2xl bg-[rgb(33,32,29)] p-2">
+                         <a href="#"><i class="fab fa-twitter p-2"></i>Twitter</a>
+                        </div>
+                        <div class="text-2xl bg-[rgb(33,32,29)] p-2">
+                         <a href="#"><i class="fab fa-instagram p-2"></i>Instagram</a>
+                        </div>
+                        <div class="text-2xl bg-[rgb(33,32,29)] p-2">
+                            <a href="#"><i class="fab fa-linkedin p-2"></i>LinkedIn</a>
+                        </div>
+                        <div class="text-2xl bg-[rgb(33,32,29)] p-2">
+                            <a href="#"><i class="fab fa-github p-2"></i>GitHub</a>
+                        </div>
+                        <div class="text-2xl bg-[rgb(33,32,29)] p-2">
+                            <a href="#"><i class="fab fa-youtube p-2"></i>Youtube</a>
+                        </div>
+                     </div>
+                     <!-- awards -->
+                      <div class="border border-[rgb(33,32,29)] p-4 mt-4 mb-20">
+                        <p class="text-sm">AWARDS</p>
+                        <div class="grid grid-cols-1">
+                            <!-- awards list -->
+                            <div class="flex justify-between p-2 border-b">
+                                <span>Awwwards SOTD</span>
+                                <span>2020</span>
+                            </div>
+                            <div class="flex justify-between p-2 border-b">
+                                <span>CSSDA SOTD</span>
+                                <span>2020</span>
+                            </div>
+                            <div class="flex justify-between p-2 border-b">
+                                <span>Awwwards Website of the Month</span>
+                                <span>2020</span>
+                            </div>
+                            <div class="flex justify-between p-2 border-b">
+                                <span>Awwwards SOTD</span>
+                                <span>2020</span>
+                            </div>
+                            <div class="flex justify-between p-2 border-b">
+                                <span>CSSDA SOTD</span>
+                                <span>2020</span>
+                            </div>
+                            <div class="flex justify-between p-2 border-b">
+                                <span>Awwwards Website of the Month</span>
+                                <span>2020</span>
+                            </div>
+                            
+                        </div>
+                      </div>
+                </div>
+                <!-- right side end -->
+            </div>
+        </div>
+    </section>
+    <!-- about section end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+    <!-- contact us section start -->
+    <section class="bg-[rgb(33,32,29)]" >
+        <div class="overflow-hidden w-full border-y border-gray-600">
+                <marquee behavior="scroll" 
+                direction="left" 
+                class="text-xl bg-[rgb(33,32,29)] backdrop-blur-md font-semibold px-6 py-3">+++.....LET'S
+                    TALK......+++.....LET'S TALK.....+++.....LET'S TALK.....+++.....LET'S TALK+++.....LET'S
+                    TALK......+++.....LET'S TALK.....+++.....LET'S TALK.....+++.....LET'S TALK+++.....LET'S
+                    TALK......+++.....LET'S TALK.....+++.....LET'S TALK.....+++.....LET'S TALK+++.....LET'S
+                    TALK......+++.....LET'S TALK.....+++.....LET'S TALK.....+++.....LET'S TALK+++.....LET'S
+                    TALK......+++.....LET'S TALK.....+++.....LET'S TALK.....+++.....LET'S TALK+++.....LET'S
+                    TALK......+++.....LET'S TALK.....+++.....LET'S TALK.....+++.....LET'S TALK+++.....LET'S
+                    TALK......+++.....LET'S TALK.....+++.....LET'S TALK.....+++.....LET'S TALK+++.....LET'S
+                    TALK......+++.....LET'S TALK.....+++.....LET'S TALK.....+++.....LET'S TALK+++.....LET'S
+                    TALK......+++.....LET'S TALK.....+++.....LET'S TALK.....+++.....LET'S TALK+++.....LET'S
+                    TALK......+++.....LET'S TALK.....+++.....LET'S TALK.....+++.....LET'S TALK+++.....LET'S
+                    TALK......+++.....LET'S TALK.....+++.....LET'S TALK.....+++.....LET'S TALK+++.....LET'S
+                    TALK......+++.....LET'S TALK.....+++.....LET'S TALK.....+++.....LET'S TALK</marquee>
+        </div>
+        <div class="container max-w-7xl mx-auto  ">
+            <div class="">
+                <h1 class="text-xl font-semibold text-center mt-20">Project in mind?</h1>
+                <div class="flex flex-col text-center ">
+                    <span class="text-7xl font-semibold italic">Let’s make your</span><br>
+                    <span class="text-7xl font-semibold italic mb-6">Website shine</span>
+                    <span class="text-xl">Premium web design, development, and SEO</span>
+                    <span class="text-xl">services to help your business stand out.</span>
+                </div>
+                <div class="flex justify-center">
+                    <a class="border rounded-lg px-4 py-2 mt-6 ">
+                        <span class="">GET IN TOUCH</span>
+                        <i class="fa-solid fa-arrow-right-long m-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- contact us section end -->
+    <!-- footer section start -->
+    <footer class="bg-[rgb(33,32,29)] text-white py-10 ">
+        <div class="container max-w-7xl mx-auto px-4">
+            <div class="flex flex-wrap justify-between items-center">
+                <!-- Logo -->
+                <div class="mb-4 md:mb-0">
+                    <h1 class="text-2xl font-bold">SHARIFUL</h1>
+                </div>
+
+                <!-- Social Media Icons -->
+                <div class="flex space-x-6 mb-4 md:mb-0">
+                    <a href="#" aria-label="Instagram" class="hover:text-gray-400">
+                        <i class="fab fa-instagram text-3xl"></i>
+                    </a>
+                    <a href="#" aria-label="Twitter" class="hover:text-gray-400">
+                        <i class="fab fa-twitter text-3xl"></i>
+                    </a>
+                    <a href="#" aria-label="Dribbble" class="hover:text-gray-400">
+                        <i class="fab fa-dribbble text-3xl"></i>
+                    </a>
+                    <a href="#" aria-label="Behance" class="hover:text-gray-400">
+                        <i class="fab fa-behance text-3xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+                <div>
+                    <h3 class="text-lg font-semibold mb-2">Pages</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-gray-400">Home</a></li>
+                        <li><a href="#" class="hover:text-gray-400">Services</a></li>
+                        <li><a href="#" class="hover:text-gray-400">About</a></li>
+                        <li><a href="#" class="hover:text-gray-400">Pricing</a></li>
+                        <li><a href="#" class="hover:text-gray-400">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-2">More Templates</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-gray-400">CMS</a></li>
+                        <li><a href="#" class="hover:text-gray-400">Work</a></li>
+                        <li><a href="#" class="hover:text-gray-400">Work Single</a></li>
+                        <li><a href="#" class="hover:text-gray-400">Blog</a></li>
+                        <li><a href="#" class="hover:text-gray-400">Blog Single</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-2">Utility Pages</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-gray-400">Styleguide</a></li>
+                        <li><a href="#" class="hover:text-gray-400">404 Error Page</a></li>
+                        <li><a href="#" class="hover:text-gray-400">Licensing</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-8 text-sm text-white">
+            © 2024 SHARIFUL. All rights reserved.
+        </div>
+    </footer>
+    <!-- footer section end -->
+
+
+
+
+</body>
+
+</html>
