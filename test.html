@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag-Follow Button</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        #floatingButton {
+            position: fixed; /* Ensures it stays relative to the viewport */
+            transition: transform 0.1s ease; /* Smooth movement effect */
+            cursor: grab; /* Changes cursor to indicate draggable behavior */
+        }
+
+        #floatingButton:active {
+            cursor: grabbing; /* Changes cursor when actively dragging */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 h-screen">
+
+    <!-- Draggable Button -->
+    <div id="floatingButton" class="flex items-center justify-center bg-blue-500 text-white w-16 h-16 rounded-full shadow-lg">
+        Drag Me
+    </div>
+
+    <script>
+        const floatingButton = document.getElementById('floatingButton');
+
+        let isDragging = false; // Track whether the button is being dragged
+
+        // When mouse is pressed down, enable dragging
+        floatingButton.addEventListener('mousedown', () => {
+            isDragging = true;
+        });
+
+        // When mouse is released, disable dragging
+        document.addEventListener('mouseup', () => {
+            isDragging = false;
+        });
+
+        // Track mouse movement and move the button when dragging
+        document.addEventListener('mousemove', (event) => {
+            if (isDragging) {
+                // Update the button's position to follow the mouse
+                const x = event.clientX - floatingButton.offsetWidth / 2; // Center horizontally
+                const y = event.clientY - floatingButton.offsetHeight / 2; // Center vertically
+
+                // Apply new position using CSS transform
+                floatingButton.style.transform = `translate(${x}px, ${y}px)`;
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <script src="index.js"></script>
+</head>
+
+<body class="bg-black text-white">
+    <style>
+        .thembg1 {
+            background-color: rgb(14, 14, 14);
+            color: white;
+        }
+
+        .bgb {
+            background-color: rgb(237, 214, 182);
+            /* bg-white/10 */
+            color: black;
+            backdrop-filter: blur(10px);
+            /* backdrop-blur-md */
+        }
+
+
+        .thembg3 {
+            background-color: rgb(33, 30, 28);
+            color: white;
+        }
+    </style>
+    <!-- navbar start  -->
+    <nav class="fixed lg:top-10 left-0 w-full z-50 ">
+        <div class="container w-1/2 mx-auto">
+            <div
+                class="flex justify-between items-center border border-gray-500 text-white rounded-lg bg-white/10 backdrop-blur-md p-1">
+                <!-- Logo -->
+                <div class="p-2">
+                    <a href="index.html" class="text-2xl font-light font-mono">SHARIFUL.</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-white hover:text-gray-300 focus:outline-none p-4 ">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Menu Links -->
+                <div id="menu" class="hidden md:flex md:space-x-4 text-lg">
+                    <a href="service.html"class="block px-4 py-1.5  hover:text-white  hover:border-b-2 rounded-sm"> Services</a>
+                    <a href="#" class="block px-4 py-1.5  hover:text-white  hover:border-b-2 rounded-sm">Work</a>
+                    <a href="#" class="block px-4 py-1.5  hover:text-white  hover:border-b-2 rounded-sm">About</a>
+                    <a href="#" class="block px-4 py-1.5  hover:text-white  hover:border-b-2 rounded-sm">Blog</a>
+                    <a href="#" class="block px-4 py-2 bgb hover:text-white rounded-lg mr-2">LET'S
+                        TALK</a>
+                </div>
+            </div>
+
+            <!-- Mobile Dropdown -->
+            <div id="dropdown-menu"
+                class="hidden absolute right-0 w-40 rounded-lg bg-white/10 backdrop-blur-md text-white shadow-lg mt-2 md:hidden">
+                <a href="service.html" class="block px-4 py-2 hover:text-black hover:border-b">Services</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100 hover:text-black">Work</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100 hover:text-black">About</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100 hover:text-black">Blog</a>
+
+            </div>
+
+        </div>
+    </nav>
+    <script>
+        // JavaScript to handle menu toggling on mobile
+        const menuToggle = document.getElementById('menu-toggle');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+        const menu = document.getElementById('menu');
+
+        menuToggle.addEventListener('click', function () {
+            dropdownMenu.classList.toggle('hidden');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function (event) {
+            if (!menuToggle.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                dropdownMenu.classList.add('hidden');
+            }
+        });
+    </script>
+    <!-- navbar end  -->
+
+    <!-- service top section start -->
+    <section>
+        <div class="container max-w-7xl mx-auto">
+            <div class="flex flex-col text-center text-9xl font-light mt-52 font-sans">
+                <span class="">Web Design</span>
+                <span class="italic">& framer</span>
+            </div>
+            <div class="flex flex-col text-center text-2xl mt-6">
+                <span class="">Premium Web Design, Development, and SEO services to </span>
+                <span class="italic">help your business stand out.</span>
+            </div>
+            <div class="text-center mt-8">
+                <i
+                    class="fa-solid fa-arrow-down py-2.5 px-3 rounded-full border hover:-rotate-90 transition-transform duration-300"></i>
+                <span class="p-2">MY SERVICES</span>
+            </div>
+            <div class="mt-8">
+                <img src="assest/image/service1.avif" alt="" class="">
+            </div>
+            <div class="flex justify-between text-center mt-12 mx-12">
+                <div class="flex flex-col">
+                    <span class="text-xl">Clients</span>
+                    <span class="text-6xl">150+</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-xl"> Projects</span>
+                    <span class="text-6xl"> 300+</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-xl"> Happy Clients</span>
+                    <span class="text-6xl">100%</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-xl"> Followers</span>
+                    <span class="text-6xl"> 100k</span>
+                </div>
+            </div>
+    </section>
+    <!-- service top section end -->
+
+    <!-- design section start -->
+    <section>
+        <div class="container max-w-7xl mx-auto">
+            <div class="border border-[rgb(33,32,29)] mt-8 mx-12 bg-[rgb(24, 23, 22)]">
+                <p class="text-sm  mt-12 ml-12">WEBDESIGN</p>
+                <p class="text-6xl font-light  ml-12">Transforming Your Ideas into Reality</p>
+                <div class="flex justify-center mt-8 ">
+                    <img src="assest/image/service1-2.png" alt="Service Image" class="">
+                </div>
+                <!-- data table -->
+                <div class="flex justify-between item-center mx-12 px-4 py-10 border-b">
+                    <!-- Heading Section -->
+                    <div class="flex flex-col justify-center shrink-0">
+                        <p class="text-lg font-semibold">Concept</p>
+                    </div>
+                    <!-- Description Section -->
+                    <div class="flex flex-col justify-start shrink-0">
+                        <p class="text-base">
+                            I take time to understand your business needs and audience to develop a unique concept for
+                            your
+                        </p>
+                        <p class="text-base">
+                            website. I'll create wireframes that serve as the foundation for your site's design and
+                            functionality.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex justify-between item-center mx-12 px-4 py-10 border-b">
+                    <!-- Heading Section -->
+                    <div class="flex flex-col justify-center shrink-0">
+                        <p class="text-lg font-semibold">UX / Ui Design</p>
+                    </div>
+                    <!-- Description Section -->
+                    <div class="flex flex-col justify-start shrink-0 ">
+                        <p class="text-base">
+                            I'll design a user-friendly interface that is visually appealing and engages your target
+                            audience.
+                        </p>
+                        <p class="text-base">
+                            Your website will be created to meet your brand's needs and goals while ensuring a seamless
+                            user.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex justify-between item-center mx-12 px-4 py-10 ">
+                    <!-- Heading Section -->
+                    <div class="flex flex-col justify-center shrink-0">
+                        <p class="text-lg font-semibold">Prototype</p>
+                    </div>
+                    <!-- Description Section -->
+                    <div class="flex flex-col justify-start shrink-0">
+                        <p class="text-base">
+                            With an interactive prototype, you'll have the ability to test your website's functionality
+                            before it.
+                        </p>
+                        <p class="text-base">
+                            This will ensure that your website's design and user experience are optimized for your
+                            audience's
+                        </p>
+                        <p class="text-base">
+                            needs and preferences.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- design section end -->
+     
+    <!-- development section start -->
+    <section>
+        <div class="container max-w-7xl mx-auto">
+            <div class="border border-[rgb(33,32,29)] mt-8 mx-12 bg-[rgb(24, 23, 22)]">
+                <p class="text-sm  mt-12 ml-12">DEVELOPMENT</p>
+                <p class="text-6xl font-light  ml-12">Developing High-Performance</p>
+                <p class="text-6xl font-light  ml-12">Websites and Web Applications</p>
+                <div class="flex justify-center mt-8 ">
+                    <img src="assest/image/service1-3.png" alt="Service Image" class="">
+                </div>
+                <!-- data table -->
+                <div class="flex justify-between item-center mx-12 px-4 py-10 border-b">
+                    <!-- Heading Section -->
+                    <div class="flex flex-col justify-center shrink-0">
+                        <p class="text-lg font-semibold">Framer</p>
+                    </div>
+                    <!-- Description Section -->
+                    <div class="flex flex-col justify-start shrink-0">
+                        <p class="text-base">
+                            I specialize in developing web applications using Framer. From custom animations to complex sharif
+                        </p>
+                        <p class="text-base">
+                            interactions, I bring your web app to life.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex justify-between item-center mx-12 px-4 py-10 border-b">
+                    <!-- Heading Section -->
+                    <div class="flex flex-col justify-center shrink-0">
+                        <p class="text-lg font-semibold">CMS Integration</p>
+                    </div>
+                    <!-- Description Section -->
+                    <div class="flex flex-col justify-start shrink-0 ">
+                        <p class="text-base">
+                            I can help you streamline your content management process by integrating a CMS into your website. 
+                        </p>
+                        <p class="text-base">
+                            I can help you streamline your content management process by integrating a CMS into your website. 
+                        </p>
+                    </div>
+                </div>
+                <div class="flex justify-between item-center mx-12 px-4 py-10 ">
+                    <!-- Heading Section -->
+                    <div class="flex flex-col justify-center shrink-0">
+                        <p class="text-lg font-semibold">WEb Design System</p>
+                    </div>
+                    <!-- Description Section -->
+                    <div class="flex flex-col justify-start shrink-0">
+                        <p class="text-base">
+                            I use a modular design approach to create a web design system that ensures consistency throughout 
+                        </p>
+                        <p class="text-base">
+                            your website. This results in a professional and cohesive online presence.
+                        </p>
+                        <p class="text-base">
+                            needs and preferences.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- development section end -->
+
+    <!-- SEO and Content section start -->
+    <section>
+        <div class="container max-w-7xl mx-auto ">
+            <div class="border border-[rgb(33,32,29)] mt-8 mx-12 bg-[rgb(24, 23, 22)]">
+                <p class="text-sm  mt-12 ml-12">SEO AND CONTENT</p>
+                <p class="text-6xl font-light ml-12">Boosting Your Website's Organic </p>
+                <p class="text-6xl font-light ml-12">Search Traffic</p>
+                <div class="flex justify-center mt-8 ">
+                    <img src="assest/image/service1-2.png" alt="Service Image" class="">
+                </div>
+                <!-- data table -->
+                <div class="flex justify-between item-center mx-12 px-4 py-10 border-b">
+                    <!-- Heading Section -->
+                    <div class="flex flex-col justify-center shrink-0">
+                        <p class="text-lg font-semibold">Research</p>
+                    </div>
+                    <!-- Description Section -->
+                    <div class="flex flex-col justify-start shrink-0">
+                        <p class="text-base">
+                            I conduct thorough research to identify the best keywords and strategies to improve your website's
+                        </p>
+                        <p class="text-base">
+                            search engine ranking.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex justify-between item-center mx-12 px-4 py-10 border-b">
+                    <!-- Heading Section -->
+                    <div class="flex flex-col justify-center shrink-0">
+                        <p class="text-lg font-semibold">SEO Ranking</p>
+                    </div>
+                    <!-- Description Section -->
+                    <div class="flex flex-col justify-start shrink-0 ">
+                        <p class="text-base">
+                            My SEO services are designed to improve your website's visibility on search engines, increasing your .
+                        </p>
+                        <p class="text-base">
+                            organic traffic and driving more leads and sales
+                        </p>
+                    </div>
+                </div>
+                <div class="flex justify-between item-center mx-12 px-4 py-10 ">
+                    <!-- Heading Section -->
+                    <div class="flex flex-col justify-center shrink-0">
+                        <p class="text-lg font-semibold">SEO Support</p>
+                    </div>
+                    <!-- Description Section -->
+                    <div class="flex flex-col justify-start shrink-0">
+                        <p class="text-base">
+                            With ongoing SEO support, I ensure that your website stays up-to-date with the latest SEO .
+                            
+                        </p>
+                        <p class="text-base">
+                            best practices, keeping you ahead of the competition
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- SEO and Content section end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- slide scroll start -->
+    <section>
+        <div class="overflow-hidden w-full my-8 ">
+            <div class="flex whitespace-nowrap animate-marquee ">
+                <marquee behavior="scroll" 
+                direction="left" 
+                class="text-xl bg-white/10 backdrop-blur-md font-semibold mx-4 px-6 py-3">+++.....LET'S
+                    TALK......+++.....LET'S TALK.....+++.....LET'S TALK.....+++.....LET'S TALK+++.....LET'S
+                    TALK......+++.....LET'S TALK.....+++.....LET'S TALK.....+++.....LET'S TALK+++.....LET'S
+                    TALK......+++.....LET'S TALK.....+++.....LET'S TALK.....+++.....LET'S TALK+++.....LET'S
+                    TALK......+++.....LET'S TALK.....+++.....LET'S TALK.....+++.....LET'S TALK+++.....LET'S
+                    TALK......+++.....LET'S TALK.....+++.....LET'S TALK.....+++.....LET'S TALK+++.....LET'S
+                    TALK......+++.....LET'S TALK.....+++.....LET'S TALK.....+++.....LET'S TALK+++.....LET'S
+                    TALK......+++.....LET'S TALK.....+++.....LET'S TALK.....+++.....LET'S TALK+++.....LET'S
+                    TALK......+++.....LET'S TALK.....+++.....LET'S TALK.....+++.....LET'S TALK+++.....LET'S
+                    TALK......+++.....LET'S TALK.....+++.....LET'S TALK.....+++.....LET'S TALK+++.....LET'S
+                    TALK......+++.....LET'S TALK.....+++.....LET'S TALK.....+++.....LET'S TALK+++.....LET'S
+                    TALK......+++.....LET'S TALK.....+++.....LET'S TALK.....+++.....LET'S TALK+++.....LET'S
+                    TALK......+++.....LET'S TALK.....+++.....LET'S TALK.....+++.....LET'S TALK</marquee>
+            </div>
+        </div>
+    </section>
+    <!-- slide scroll end -->
+
+    <!-- contact us section start -->
+    <section>
+        <div class="container max-w-7xl mx-auto mt-20 ">
+            <div class="">
+                <h1 class="text-xl font-semibold text-center mb-6">Project in mind?</h1>
+                <div class="flex flex-col text-center ">
+                    <span class="text-7xl font-semibold italic">Let’s make your</span><br>
+                    <span class="text-7xl font-semibold italic mb-6">Website shine</span>
+                    <span class="text-xl">Premium web design, development, and SEO</span>
+                    <span class="text-xl">services to help your business stand out.</span>
+                </div>
+                <div class="flex justify-center">
+                    <a class="border rounded-lg px-4 py-2 mt-6 ">
+                        <span class="">GET IN TOUCH</span>
+                        <i class="fa-solid fa-arrow-right-long m-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- contact us section end -->
+
+    <!-- footer section start -->
+    <footer class="text-white py-10 mt-8">
+        <div class="container max-w-7xl mx-auto px-4">
+            <div class="flex flex-wrap justify-between items-center">
+                <!-- Logo -->
+                <div class="mb-4 md:mb-0">
+                    <h1 class="text-2xl font-bold">SHARIFUL</h1>
+                </div>
+
+                <!-- Social Media Icons -->
+                <div class="flex space-x-6 mb-4 md:mb-0">
+                    <a href="#" aria-label="Instagram" class="hover:text-gray-400">
+                        <i class="fab fa-instagram text-3xl"></i>
+                    </a>
+                    <a href="#" aria-label="Twitter" class="hover:text-gray-400">
+                        <i class="fab fa-twitter text-3xl"></i>
+                    </a>
+                    <a href="#" aria-label="Dribbble" class="hover:text-gray-400">
+                        <i class="fab fa-dribbble text-3xl"></i>
+                    </a>
+                    <a href="#" aria-label="Behance" class="hover:text-gray-400">
+                        <i class="fab fa-behance text-3xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+                <div>
+                    <h3 class="text-lg font-semibold mb-2">Pages</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-gray-400">Home</a></li>
+                        <li><a href="#" class="hover:text-gray-400">Services</a></li>
+                        <li><a href="#" class="hover:text-gray-400">About</a></li>
+                        <li><a href="#" class="hover:text-gray-400">Pricing</a></li>
+                        <li><a href="#" class="hover:text-gray-400">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-2">More Templates</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-gray-400">CMS</a></li>
+                        <li><a href="#" class="hover:text-gray-400">Work</a></li>
+                        <li><a href="#" class="hover:text-gray-400">Work Single</a></li>
+                        <li><a href="#" class="hover:text-gray-400">Blog</a></li>
+                        <li><a href="#" class="hover:text-gray-400">Blog Single</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-2">Utility Pages</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-gray-400">Styleguide</a></li>
+                        <li><a href="#" class="hover:text-gray-400">404 Error Page</a></li>
+                        <li><a href="#" class="hover:text-gray-400">Licensing</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-8 text-sm text-white">
+            © 2024 SHARIFUL. All rights reserved.
+        </div>
+    </footer>
+    <!-- footer section end -->
+
+
+
+</body>
+</html>
